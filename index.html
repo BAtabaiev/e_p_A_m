@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="container">
+        <div id="content" role="main">
+        
+          <header id="home">
+            <img id="logo" src="./logo.png" alt="epam">
+            <h1><b>HTML Elements</b></h1>
+          </header>
+
+          <hr>
+        
+          <article>
+            <nav>
+                  <a href="#home"><u><strong>Home</strong></u></a>
+                  <a href="#headers"><u><strong>Headers</strong></u></a>
+                  <a href="#article"><u><strong>Article</strong></u></a>
+                  <a href="#table"><u><strong>Table</strong></u></a>
+                  <a href="#list"><u><strong>List</strong></u></a>
+                  <a href="#text_formats"><u><strong>Text formats</strong></u></a>
+                  <a href="#blockquotes"><u><strong>Blockquotes</strong></u></a>
+                  <a href="#form"><u><strong>Form</strong></u></a>
+           </nav>
+          </article>
+       
+
+          <hr>
+          
+        <article id="headers">
+          <h2>Header 2</h2>
+          <h3>Header 3</h3>
+          <h4>Header 4</h4>
+          <h5>Header 5</h5>
+          <h6>Header 6</h6>
+          <p>Pay attention to h1 tag inside section element. Font-size for h1 is the same as font-size for h2, 
+            because we have to use only one h1 on the page, and it is commonly used inside header
+          </p>
+        </article>
+
+        <hr>
+
+        <article id="article">
+          <h2>Article</h2>
+          <img src="./thumbnail.png" alt="html">
+          <p><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. 
+            Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. 
+            Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. 
+            To copy a file type COPY <i>filename</i>. <s>Dinner`s at 5:00.</s> <mark>Let’s make that 7.</mark> This <s>text</s> has been struck.
+          </p>
+
+          <p>Lorem ipsum dolor sit amet, <a href="#">test link</a> adipiscing elit. <strong>This is strong.</strong> Nullam dignissim convallis est. Quisque aliquam. 
+            <em>This is emphasized</em>. 
+            Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. 
+            <i>The New York Times</i> (That’s a citation).<u>Underline.</u> Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. 
+            Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+          </p>
+        </article>
+
+        <hr>
+
+        <article id="table">
+          <h2>Table</h2>
+          <table>
+
+            <colgroup>
+              <col span="1" style="background-color: #f7f7f7;">
+              <col>
+              <col>
+              <col>
+            </colgroup>
+
+            <thead>
+
+              <tr>
+                <th>№</th>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+            <tr>
+              <td>1</td>
+              <td>Division 1</td>
+              <td>Division 2</td>
+              <td>Division 3</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Division 1</td>
+              <td>Division 2</td>
+              <td>Division 3</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Division 1</td>
+              <td>Division 2</td>
+              <td>Division 3</td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>Division 1</td>
+              <td>Division 2</td>
+              <td>Division 3</td>
+            </tr>
+          </tbody>
+          </table>
+        </article>
+
+        <hr>
+
+        <article id="list">
+          <h2>List</h2>
+          <h2>Unordered List</h2>
+          
+          <ul>
+            <li>List item 1</li>
+            <li>List item 2
+              <ul>
+                <li>Some nested list item 1</li>
+              </ul>
+            </li>
+            <li>List item 3</li>
+          </ul>
+
+          <h2>Ordered List</h2>
+
+          <ol>
+              <li>List item 1</li>
+              <li>List item 2
+                <ol>
+                  <li>Some nested list item 1</li>
+                </ol>
+              </li>
+              <li>List item 3</li>
+          </ol>
+        </article>
+
+        <article>
+          <h3>Definition List</h3>
+
+            <dl>
+              <dt>defines terms 1</dt>
+              <dd>description 1</dd>
+
+              <dt>defines terms 2</dt>
+              <dd>description 2</dd>
+            </dl>
+
+            <p>Details 
+            <select name="select">
+              <option value="value1">HTML</option>
+              <option value="value2">CSS</option>
+              <option value="value3">JS</option>
+            </select>
+          </p>
+        </article>
+
+        <hr>
+
+        <article id="text_formats">
+          <h2>Text formats</h2>
+          <h3>Article text</h3>
+          <article>
+            <h2>Article title</h2>
+            <p>Article description</p>
+          </article>
+         
+          <h3>Preformatted Text</h3>
+            <pre><b>Text</b>
+  in a <b>pre</b> element
+    is displayed in a fixed-width
+font, and it preserves
+both           spaces and
+    line breaks
+            </pre>
+          
+          <h3>Code</h3>
+
+            <pre>
+.wrapper {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+ }
+            </pre>
+        </article>
+
+        <hr>
+
+        <article id="blockquotes">
+          <h2>Blockquotes</h2>
+          <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+          <blockquote cite="https://en.wikipedia.org/wiki/Elon_Musk">
+            "If you go back a few hundred years, what we take for granted today would seem like magic-being able to talk to people over long distances, 
+              to transmit images, flying, accessing vast amounts of data like an oracle. These are all things that would have been considered magic a few hundred years ago."
+            <p><a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a></p>
+            </blockquote>
+          
+
+        </article>
+        <hr>
+
+        <article id="form">
+          <h2>Form</h2>
+          <p>Element represents a document section containing interactive controls for submitting information.</p>
+            <form action="#" method="post">
+              <div>
+                <label for="firstname">First name:</label>
+                <input id="firstname" type="text" name="name" value="">
+              </div>
+
+              <div>
+                <label for="surname">Surname:</label>
+                <input id="surname" type="text" name="surname">
+              </div>
+
+              <div>
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email">
+              </div>
+
+              <div>
+                <fieldset>
+                  <div>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender">
+                  </div>
+                  <div>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div>
+                <textarea name="info" rows="9" cols="27"></textarea>
+              </div>
+
+              <div>
+              <button type="submit">Submit</button>
+              </div>
+            </form>
+        </article>
+    
+        <footer> © Copyright Epam Systems</footer>
+
+        
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
