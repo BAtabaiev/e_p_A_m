@@ -1,0 +1,199 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.tm-nav-item-link:hover{
+    background-color: #87CEFA;
+}
+
+.tm-sidebar, #home, #main, #about, #we-are, #our-work, #ideas, #forms{
+    box-shadow: 0px 0px 12px 0px rgba(61, 55, 61, 0.7);
+}
+
+.flex-2-col{
+    display: flex;
+
+}
+
+#main div{
+    flex: 0 0 33%;
+}
+
+.tm-section-description .color-blue:first-child:first-letter{
+    font-size: 1.5rem;
+}
+
+
+section:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 235px 0 0;
+    border-color: #00c3d9 transparent transparent transparent;
+
+}
+
+#main div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tm-section-description{
+    display: inline-block;
+}
+
+.section-title {
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+.color-blue{
+    color: #87CEFA;
+    display: inline-block;
+}
+
+
+#about ul li h2:hover{
+    background-color: #87CEFA;
+    transition: 0.5s;
+    color: white;
+    font-weight: bold;
+}
+
+#we-are .padding-medium{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padding-medium h2{
+    text-transform: capitalize;
+}
+
+.padding-medium ol{
+    display: flex;
+}
+.padding-medium ol li{
+    list-style-type: none;
+    padding: 20px;
+}
+
+.padding-medium ol li a:visited{
+    color: #87CEFA;
+}
+
+#our-work .padding-medium p{
+    font-style: italic;
+}
+
+#our-work .padding-medium p:last-child{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.gallery-container li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.content h2{
+    font-weight: bold;
+}
+
+.content p{
+    font-style: italic;
+}
+
+.btn{
+    background-color: white;
+    color: #87CEFA;
+    border: 1px solid #87CEFA;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    left: 0;
+    float: right;
+}
+
+.btn:hover{
+    background-color:#87CEFA;
+    border: 1px solid #87CEFA;
+    color: #D5EDFC;
+    border-radius: 0;
+}
+
+.mandatory-field:after {
+    content: '*';
+    position: absolute;
+    font-weight: bold;
+    color: rgb(248, 3, 3);
+}
+
+@media print{
+    @page {
+    size: auto;
+    margin: 0;  
+    }
+    .tm-sidebar, #about, #we-are, #our-work, #ideas, #forms, section:before {
+        display: none;
+    }
+   .conteiner, section{
+       width: 100%;
+       display: flex;   
+   }
+   #home{
+       margin-bottom: -10px;
+   }
+    #main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        line-height: 1;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 11px;
+        padding-bottom: 20px;
+    }
+    #main h2{
+        padding: 20px;
+        margin: 0;
+    }
+   /* .tm-banner img{
+        width: 80px;
+    }*/ 
+    .tm-banner p {
+        font-size: 20px;
+    }
+   #main div:first-child{
+        margin: 0 auto; 
+    }
+    .padding-medium{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .tm-section-description{
+        width: 100%;
+        letter-spacing: 1px;
+    }
+    .section-title {
+        color: blue;
+        font-weight: 500;
+    }
+    .color-blue, .tm-section-description .color-blue:first-child:first-letter{
+        color: black;
+    }
+    .tm-footer{
+        margin-top: 10px;
+    }
+    .tm-footer p{
+        font-size: 12px;
+    }
+}
