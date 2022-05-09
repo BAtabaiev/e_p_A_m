@@ -1,0 +1,53 @@
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    margin-bottom: 20px;
+}
+input{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.game-buttons{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.game-buttons button{
+    background: #ffe87c;
+    padding: 5px;
+    font-weight: bold;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+
+.click button{
+font-size: 40px;
+width: 300px;
+height: 300px;
+border-radius: 50%;
+background-color: aqua;
+cursor: pointer;
+border-top: 3px solid grey;
+border-left: 3px solid grey;
+border-right: 3px solid black;
+border-bottom: 3px solid black;
+}
