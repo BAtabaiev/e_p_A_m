@@ -1,4 +1,3 @@
-// Write your code here
 const requestURL =  'https://jsonplaceholder.typicode.com/users';
 
 const xhrBtn = document.querySelector('.js-container__button');
@@ -36,7 +35,7 @@ function addUser(user, userBlock, isFetch) {
             `
             <div class="fetch-container__block__data" id="data-${user.id}">
 
-                <span class="data-text">${user.name}</span>
+                <span class="data-text" id="user-${user.id}">${user.name}</span>
                 <div class="fetch__buttons">
                     <button class="edit" id="${user.id}">Edit</button>
                     <button class="delete" id="delete-${user.id}">Delete</button>
@@ -94,7 +93,7 @@ fetchBtn.addEventListener('click', () => {
    
 })
 
-function editUser (user) {
+function editUser (user, userBlock) {
     const editBtn = document.getElementById(user.id);
     const form = document.getElementById(`form-${user.id}`);
     const saveBtn = document.getElementById(`save-${user.id}`);
@@ -102,6 +101,7 @@ function editUser (user) {
 
     editBtn.addEventListener('click', () => {
         loader.removeAttribute('hidden');
+        form.classList.remove('hidden');
         const loading = setInterval (() => {
             form.classList.add('form__active');
             loader.setAttribute('hidden', '');
@@ -109,12 +109,32 @@ function editUser (user) {
         return loading;
     })
 
+    
+
     saveBtn.addEventListener('click', () => {
-        console.log(saveBtn);
-        const newUser = inputBtn.textContent;
-        user.name = JSON.stringify(newUser);
-        console.log(user.name);
+        let newUser = inputBtn.value;
+        if(newUser.length <= 0) {
+            alert('Empty user name')
+        } else {
+            form.classList.add('hidden');
+            const newUserData = document.getElementById(`user-${user.id}`);
+            user.name = newUser;
+            newUserData.innerHTML = user.name;
+            inputBtn.value = "";
+            fetch(requestURL, {
+                method: "PUT",
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                  },
+                body:JSON.stringify(user.name)
+            })
+            .then(response => {
+                return response.json();
+            })
+        }
+        
     })
+
 }
 
 function deleteUser (user, userBlockData) {
@@ -125,8 +145,7 @@ function deleteUser (user, userBlockData) {
             userBlockData.classList.add('hidden');
             loader.setAttribute('hidden', '');
         }, 500);
+        alert('Deleted!')
         return loading;
     })
 }
-
-
