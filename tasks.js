@@ -25,12 +25,7 @@ console.log(b);
 
 //====================3rd Task================
 function getValue(value) {
-    if(value === null || value === undefined) {
-        return "-";
-    } else {
-        return value;
-    }
-  
+    return value ?? '-';
 }
 
 console.log(getValue(0));
