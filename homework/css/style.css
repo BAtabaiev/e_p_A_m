@@ -1,0 +1,172 @@
+/* Your style goes here */
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/001/370/782/original/black-with-gold-accent-background-free-vector.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  font-family: 'Lobster Two', cursive;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-container {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  align-self: center;
+  background: #000;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.border {
+  position: absolute;
+  display: block;
+  top: -50%;
+  left: -50%;
+  z-index: -9;
+  display: block;
+  height: 200%;
+  width: 200%;
+  transform: rotate(-45deg);
+  overflow: hidden;
+  background: linear-gradient(to right, #000 20%, #000 40%, #DAA520 50%, #DAA520 55%, #000 70%, #000 100%);
+  background-size: 200% auto;
+  
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.calendar-inner {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-info {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+}
+
+.calendar-today {
+  width: 60%;
+  background-color: rgb(44,43,43);
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.calendar-body {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendar-body__container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.calendar-body__header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.calendar__day-name {
+  padding: 5px;
+  text-align: center;
+  color: #DAA520;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.day {
+  background-color: rgb(44, 43, 43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.day:hover {
+  background-color: #DAA520;
+  transition: 0.3s;
+}
+
+.day:active {
+  background-color: #DAA520;
+}
+
+.calendar-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.calendar-btn:hover {
+  opacity: 0.3;
+}
+
+.windows-light {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  z-index: 4;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  cursor: pointer;
+  background: radial-gradient(ellipse at center, rgba(218, 165, 32, .5) 0%, rgba(218, 165, 32, 0) 50%);
+  /* background: white; */
+}
